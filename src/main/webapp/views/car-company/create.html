@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style th:replace="/layout::css"></style>
+</head>
+<body>
+<form th:action="@{/car-company/create}" method="post" th:object="${carCompany}">
+    <label>Name:
+        <input type="text" th:field="*{name}">
+    </label>
+    <button type="submit">Create</button>
+</form>
+<a th:href="@{/car-company}">Back to home</a>
+</body>
+</html>
